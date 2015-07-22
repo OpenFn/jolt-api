@@ -79,3 +79,10 @@ The API will return:
   }
 }
 ```
+
+### See it in action
+
+You can see the API in action. Send a POST request to ```https://jolt-api.herokuapp.com/shift``` with
+the required params and watch the magic happen.
+
+
