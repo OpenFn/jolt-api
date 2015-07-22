@@ -1,6 +1,6 @@
 # Jolt API
 
-** Still work in progress **
+**Still work in progress**
 
 REST API around [Jolt](https://github.com/bazaarvoice/jolt). If you are unfamiliar
 with Jolt, head over to their repo and check it out.
@@ -10,6 +10,7 @@ with Jolt, head over to their repo and check it out.
 ### /shift
 
 Endpoint: ```/shift```
+
 Params:
 - ```spec``` is the spec
 - ```input``` is the input JSON
