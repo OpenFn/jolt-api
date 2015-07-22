@@ -80,7 +80,16 @@ The API will return:
 }
 ```
 
-### See it in action
+## Development
+
+0. Clone this repo.
+1. Run ```rbenv install``` to install the required jruby version.
+2. Rehash rbenv just in case ```rbenv rehash```
+3. Install bundler with ```jruby -S gem install bundler```.
+4. Bundle install with ```jruby -S bundle install```.
+5. Boot the server via ```rackup config.ru```.
+
+## See it in action
 
 You can see the API in action. Send a POST request to ```https://jolt-api.herokuapp.com/shift``` with
 the required params and watch the magic happen.
