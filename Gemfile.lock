@@ -2,6 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.7.0)
+    puma (2.14.0)
+    puma (2.14.0-java)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -17,7 +19,8 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
+  puma
   sinatra
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

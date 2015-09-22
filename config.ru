@@ -1,4 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require File.expand_path '../lib/service.rb', __FILE__
+
+$:.unshift File.dirname(__FILE__)
+
+require 'lib/service.rb'
 run Sinatra::Application

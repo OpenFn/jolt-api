@@ -16,7 +16,7 @@ class Shifter
     # Get input JSON
     input = JSON.parse(raw_input)
 
-    chainr.transform(input).to_json
+    chainr.transform(input).to_hash
   end
 end
 
