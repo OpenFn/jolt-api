@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    jrjackson (0.3.4)
     minitest (5.7.0)
     puma (2.14.0)
     puma (2.14.0-java)
@@ -18,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jrjackson
   minitest
   puma
   sinatra

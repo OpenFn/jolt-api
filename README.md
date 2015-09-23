@@ -11,33 +11,26 @@ with Jolt, head over to their repo and check it out.
 
 Endpoint: ```/shift```
 
-Params:
-- ```spec``` is the spec
-- ```input``` is the input JSON
-
 Accepts JSON input and spec. Returns the transformed JSON as a result.
 
 **Example**
 
 By sending the input:
-```js
+```json
 {
-  "rating": {
-    "primary": {
-      "values": 3
-    },
+  "input": {
+    "rating": {
+      "primary": {
+        "values": 3
+      },
       "quality": {
         "values": 3
       }
-  }
-}
-```
-
-and the spec:
-```js
-[
-  {
-    "operation": "shift",
+    }
+  },
+  "specs": [
+    {
+      "operation": "shift",
       "spec": {
         "rating": {
           "primary": {
@@ -49,24 +42,25 @@ and the spec:
           }
         }
       }
-  },
-  {
-    "operation": "default",
-    "spec": {
-      "Range" : 5,
-      "SecondaryRatings" : {
-        "*" : {
-          "Range" : 5
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "Range" : 5,
+        "SecondaryRatings" : {
+          "*" : {
+            "Range" : 5
+          }
         }
       }
     }
-  }
-]
+  ]
+}
 ```
 
 The API will return:
 
-```js
+```json
 {
   "Rating": 3,
   "Range": 5,
@@ -84,10 +78,10 @@ The API will return:
 
 0. Clone this repo.
 1. Run ```rbenv install``` to install the required jruby version.
-2. Rehash rbenv just in case ```rbenv rehash```
-3. Install bundler with ```jruby -S gem install bundler```.
-4. Bundle install with ```jruby -S bundle install```.
-5. Boot the server via ```rackup config.ru```.
+2. Install bundler with ```gem install bundler```.
+3. Rehash rbenv just in case ```rbenv rehash```
+4. Bundle install with ```bundle install```.
+5. Boot the server via ```rackup```.
 
 ## See it in action
 

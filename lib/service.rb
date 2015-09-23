@@ -1,8 +1,16 @@
-require 'json'
 require './lib/shifter'
 
-post '/shift' do
-  result = Shifter.process(params[:input], params[:spec])
-  [200, {'Content-Type' => 'application/json'}, result.to_json]
+before do
+  request.body.rewind
+  @request_payload = JrJackson::Json.load request.body.read
 end
 
+post '/shift' do
+  specs = @request_payload['specs']
+  input = @request_payload['input']
+
+  chainr = Chainr.fromSpec(specs)
+  result = chainr.transform(input)
+  
+  [200, {'Content-Type' => 'application/json'}, JrJackson::Json.dump(result)]
+end
